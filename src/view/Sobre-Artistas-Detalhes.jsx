@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { Link, useParams } from "react-router-dom";
 import api from '../api.jsx';
 import "../css/Sobre.css";
-import GoBack from '../../src/assets/ico-goBack.svg';
+import GoBack from '../../public/ico-goBack.svg';
 
 import Navbar from "../components/Navbar";
 import { Footer } from '../components/Footer';
