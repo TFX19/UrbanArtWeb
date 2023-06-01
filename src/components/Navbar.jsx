@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from 'react-router-dom';
 import "../css/App.css";
-import vite from "../../public/vite.svg"
+
 
 function Navbar() {
   const location = useLocation(); // once ready it returns the 'window.location' object
@@ -16,7 +16,7 @@ function Navbar() {
         <div className="container">
           <div className="navbrand">
           <a className="navbar-brand" href="#">
-            <img src={vite} alt="logo" />
+            <img src="../assets/Logo.png" alt="logo" />
           </a>
           </div>
           <button
