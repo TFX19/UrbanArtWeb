@@ -16,7 +16,7 @@ function Navbar() {
         <div className="container">
           <div className="navbrand">
           <a className="navbar-brand" href="#">
-            <img src="../../assets/Logo.png" alt="logo" />
+            <img src="../assets/Logo.png" alt="logo" />
           </a>
           </div>
           <button
