@@ -1,7 +1,11 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from 'react-router-dom';
 import "../css/App.css";
+<<<<<<< HEAD
 import logo from "../../public/Logo.png"
+=======
+
+>>>>>>> parent of e307c49 (testessss)
 
 function Navbar() {
   const location = useLocation(); // once ready it returns the 'window.location' object
@@ -16,7 +20,11 @@ function Navbar() {
         <div className="container">
           <div className="navbrand">
           <a className="navbar-brand" href="#">
+<<<<<<< HEAD
             <img src={logo} alt="logo" />
+=======
+            <img src="../assets/Logo.png" alt="logo" />
+>>>>>>> parent of e307c49 (testessss)
           </a>
           </div>
           <button
