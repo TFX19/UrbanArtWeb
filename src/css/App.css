@@ -1,0 +1,86 @@
+.section-heroi {
+    background-image: url('../assets/background-heroi.jpg');
+    color: white;
+}
+
+.section-objetivo {
+    background-color: white;
+    height: 50vh;
+    color: black;
+}
+
+.txt-inicio h2 {
+    font-weight: 100;
+}
+
+.txt-inicio button {
+    width: 196px;
+    height: 55px;
+}
+
+ .section-podes-contar{
+    background-color: #F3F3F3;
+    height: 1024px;
+} 
+.section-podes-contar button{
+    width: 416px;
+    height: 55px;
+}
+
+.section-imgexplorar{
+    height: 65vh;
+    background-image: url('../assets/background-sobre.jpg');
+    background-repeat:repeat-x;
+    
+}
+.section-sobre-maps{
+    background-color: #F3F3F3;
+}
+
+.InfoWindowStyle{
+    width: 500px;
+    height: 330px;
+    border-radius: 0px;
+}
+
+.cabecalho-InfoWindow h1{
+color: #6C757D;
+font-size: 20px;
+font-weight: 600;
+}
+.cabecalho-InfoWindow h3{
+    color: #6C757D;
+    font-size: 14px;
+    font-weight: 600;
+    }
+.txt-InfoWindow h3{
+    color: #6C757D;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.txt-InfoWindow p{
+    color: #6C757D;
+    font-size: 14px;
+    font-weight: 300;
+}
+.map-marker{
+    font-weight: bold;
+}
+.navbrand{
+    margin-right: 25%;
+}
+.map-marker{
+    margin-top: -50px;
+}
+@media only screen and (max-width: 765px) {
+    .txtA {
+      display: none;
+    }
+    .section-podes-contar{
+        height: fit-content;
+    }
+    .carouselll{
+        display: none;
+    }
+  }
