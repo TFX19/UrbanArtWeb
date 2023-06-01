@@ -1,0 +1,55 @@
+.section-imgsobre{
+    height: 65vh;
+    background-image: url('../assets/background-sobre.jpg');
+    background-repeat:repeat-x;
+    
+}
+.txt-tsobre h2{
+    font-weight: 700;
+    font-size: 56px;
+    color: white;
+    padding-top: 120px;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.section-sobre{
+ height: 35vh;   
+}
+.txtsobreD p{
+font-weight: 500;
+font-size: 20px;
+padding-top: 8%;
+}
+
+.section-murais{
+    background-color: #F3F3F3;
+    height: 25vh;
+}
+.section-cards-murais{
+   background-color: #ffffff;
+   height: 65vh;
+}
+
+.section-murais-detalhes h2{
+    font-weight: 700;
+    font-size: 24px;
+    color: #6C757D;
+}
+.section-murais-detalhes p, h3{
+    font-style: light;
+    font-weight: 300;
+    font-size: 24px;
+}
+
+.section-btn-murais{
+    height: 25vh;
+    background-color: #F3F3F3;
+}
+@media only screen and (max-width: 765px) {
+    .section-murais {
+        height: fit-content;
+    }
+    .section-cards-murais{
+        height: fit-content;
+    }
+  }
