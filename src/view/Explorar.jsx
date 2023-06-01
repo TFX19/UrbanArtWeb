@@ -2,7 +2,7 @@ import React from 'react';
 import { useState, useEffect } from 'react';
 import { Link } from "react-router-dom";
 import api from '../api.jsx';
-import "../css/app.css";
+import "../css/App.css";
 import { GoogleMap, useJsApiLoader, MarkerF, InfoWindowF } from '@react-google-maps/api';
 import Navbar from "../components/Navbar";
 import { Footer } from '../components/Footer';
@@ -117,7 +117,7 @@ function explorar() {
                     lng: parseFloat(murais.longitude),
                   }}
                   icon={{
-                    url:"../assets/ico-marker.svg",
+                    url:"../../assets/markerp.png",
                   }}
                   options={{
                     label: {
