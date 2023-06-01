@@ -6,7 +6,7 @@ import "../css/Sobre.css";
 import Search from '../components/Search.jsx';
 import Navbar from "../components/Navbar";
 import { Footer } from '../components/Footer';
-import CardArtistas from '../components/CardArtistas.jsx';
+import CardArtistas from '../components/Cardartistas.jsx';
 
 function sobre() {
 
