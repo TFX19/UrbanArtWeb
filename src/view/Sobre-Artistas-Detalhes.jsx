@@ -3,10 +3,8 @@ import { Link, useParams } from "react-router-dom";
 import api from '../api.jsx';
 import "../css/Sobre.css";
 import GoBack from '../../public/ico-goBack.svg';
-
 import Navbar from "../components/Navbar";
 import { Footer } from '../components/Footer';
-import Carousel from '../components/Carousel.jsx';
 
 
 function SobreMuraisDetalhes() {

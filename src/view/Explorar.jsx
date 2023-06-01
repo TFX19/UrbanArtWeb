@@ -7,7 +7,6 @@ import { GoogleMap, useJsApiLoader, MarkerF, InfoWindowF } from '@react-google-m
 import Navbar from "../components/Navbar";
 import { Footer } from '../components/Footer';
 
-
 function explorar() {
 
   const [explorarT, setExplorarT] = useState('');
@@ -118,7 +117,7 @@ function explorar() {
                     lng: parseFloat(murais.longitude),
                   }}
                   icon={{
-                    url:'./../../assets/ico-marker.svg'
+                    url:"../assets/ico-marker.svg",
                   }}
                   options={{
                     label: {

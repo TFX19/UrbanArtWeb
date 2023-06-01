@@ -1,5 +1,5 @@
 import React from "react";
-
+import logow from "../../public/Logowhite.svg"
 export function Footer() {
   return (
     <div id="footer" className="bg-dark">
@@ -10,7 +10,7 @@ export function Footer() {
               <a
                 href="/"
                 className="d-flex align-items-center  mb-3 link-dark text-decoration-none">
-                <img src="../../assets/Logowhite.svg" alt="logo branco" />
+                <img src={logow} alt="logo branco" />
               </a>
             </div>
             <div className="col mb-3"></div>

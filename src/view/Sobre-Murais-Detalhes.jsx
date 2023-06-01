@@ -3,8 +3,8 @@ import StreetViewLink from "../components/StreetViewLink.jsx";
 import { Link, useParams } from "react-router-dom";
 import api from "../api.jsx";
 import "../css/Sobre.css";
-import GoBack from "../../src/assets/ico-goBack.svg";
-
+import GoBack from "../../public/ico-goBack.svg";
+import newTab from "../../public/ico-newtab.svg";
 import Navbar from "../components/Navbar";
 import { Footer } from "../components/Footer";
 import Carousel from "../components/Carousel.jsx";
@@ -89,7 +89,7 @@ function SobreMuraisDetalhes() {
               <h3 className="text-muted"> <Link to={`/sobre/artista/${artista.idartista}`}>{artista.nomeartistico}</Link></h3>
               <h3 className="text-muted">{mural.datainauguracao}</h3>
               <h2 className="mt-5"> 
-                 <StreetViewLink latitude={mural.latitude} longitude={mural.longitude} morada={mural.rua}/> <img src="../../assets/ico-newtab.svg" alt="link externo" />
+                 <StreetViewLink latitude={mural.latitude} longitude={mural.longitude} morada={mural.rua}/> <img src={newTab} alt="link externo" />
               </h2>
               <p className="mt-5">{mural.descricao}</p>
             </div>

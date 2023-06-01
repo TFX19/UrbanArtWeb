@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import coment from "../../public/ico-coment.svg";
 
 export function CardMurais(props) {
  
@@ -17,7 +18,7 @@ export function CardMurais(props) {
           <p style={{whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis', maxWidth:'300px'}} className="card-text pt-3">{descricao}</p>
           <div className="d-flex justify-content-between mt-5">
           <Link to={idmurais} type="button" href="#" className="btn btn-primary">ver mais</Link>
-          <a href="" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal"><img src="../assets/ico-coment.svg" alt="icon comentário" /></a>
+          <a href="" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal"><img src={coment} alt="icon comentário" /></a>
           </div>
         </div>
       </div>

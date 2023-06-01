@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { Link } from "react-router-dom";
 import api from '../api.jsx';
 import "../css/Sobre.css";
-
+import goBack from "../../public/ico-goBack.svg"
 import Search from '../components/Search.jsx';
 import Navbar from "../components/Navbar";
 import { Footer } from '../components/Footer';
@@ -56,7 +56,7 @@ const filteredMurals = murais.filter((mural) =>
             <div className='section-murais position-relative p-5 d-flex w-100 '>
                 <div className='container d-flex justify-content-start'>
                     <Link style={{marginRight: '3%'}} to='/Sobre'>
-                        <img src="../assets/ico-goBack.svg" alt="" />
+                        <img src={goBack} alt="" />
                     </Link>
                     <h1>Conhece a arte Urbana</h1>
                 </div>
