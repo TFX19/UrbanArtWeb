@@ -2,12 +2,11 @@ import { useState, useEffect } from 'react';
 import { Link } from "react-router-dom";
 import api from '../api.jsx';
 import "../css/Sobre.css";
-import teste from "../assets/testeA.jpg"
 
 import Navbar from "../components/Navbar";
 import { Footer } from '../components/Footer';
 import CardMurais from '../components/CardMurais.jsx';
-import CardArtistas from '../components/Cardartistas.jsx';
+import CardArtistas from '../components/CardArtistas.jsx';
 import ModalC from '../components/ModalC.jsx';
 
 function sobre() {
