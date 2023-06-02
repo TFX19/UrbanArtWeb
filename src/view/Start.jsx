@@ -136,7 +136,7 @@ function App() {
                   <strong>{podescT}</strong>
                 </h3>
                 <p>{podescD}</p>
-                <Link to='/explorar' type='button' className="btn btn-primary w-100">Explorar</Link>
+                <Link to='/explorar' type='button' onClick={"location.href='#explorar'"} className="btn btn-primary w-100">Explorar</Link>
               </div>
             </div>
             <div className="container col row row-cols-1 row-cols-md-2">

@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { Link } from "react-router-dom";
 import api from '../api.jsx';
 import "../css/Sobre.css";
-
+import goBack from "../../public/ico-goBack.svg";
 import Search from '../components/Search.jsx';
 import Navbar from "../components/Navbar";
 import { Footer } from '../components/Footer';
@@ -18,9 +18,9 @@ function sobre() {
     setSearchTerm(event.target.value);
   };
 
-const filteredArtistas = artistas.filter((artistas) =>
-  artistas.nomeartistico.toLowerCase().includes(searchTerm.toLowerCase())
-);
+    const filteredArtistas = artistas.filter((artistas) =>
+    artistas.nomeartistico.toLowerCase().includes(searchTerm.toLowerCase())
+    );
 
     useEffect(() => {
         api
@@ -53,7 +53,7 @@ const filteredArtistas = artistas.filter((artistas) =>
             <div className='section-murais position-relative p-5 d-flex w-100 '>
                 <div className='container d-flex justify-content-start'>
                     <Link style={{marginRight: '3%'}} to='/Sobre'>
-                        <img src="../assets/ico-goBack.svg" alt="" />
+                        <img src={goBack} alt="voltar" />
                     </Link>
                     <h1>Conhece os artistas</h1>
                 </div>

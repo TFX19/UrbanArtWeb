@@ -82,7 +82,7 @@ function explorar() {
   };
 
   return (
-    <div className='App'>
+    <div id='explorar' className='App'>
       <Navbar />
       <div className="ghost"></div>
 
@@ -116,7 +116,7 @@ function explorar() {
                     lng: parseFloat(murais.longitude),
                   }}
                   icon={{
-                    url:"../../assets/markerp.png",
+                    url:"https://i.imgur.com/VqisD3a.png",
                   }}
                   options={{
                     label: {
