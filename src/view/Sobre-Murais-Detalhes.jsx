@@ -82,7 +82,7 @@ function SobreMuraisDetalhes() {
       </div>
 
       <div className="section-murais-detalhes d-flex min-vh-100 mt-5 w-100">
-      <div className="container mt-3 align-items-center">
+      <div className="container mb-5 align-items-center">
         {mural && (
             <div className="container">
               <h1 className="mb-5">{mural.titulo}</h1>
@@ -91,7 +91,7 @@ function SobreMuraisDetalhes() {
               <h2 className="mt-5"> 
                  <StreetViewLink latitude={mural.latitude} longitude={mural.longitude} morada={mural.rua}/> <img src={newTab} alt="link externo" />
               </h2>
-              <p className="mt-5">{mural.descricao}</p>
+              <p className="text-start mt-5">{mural.descricao}</p>
             </div>
         )}
         {eventos.map((evento) => (

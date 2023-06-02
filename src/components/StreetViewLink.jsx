@@ -8,7 +8,7 @@ const StreetViewLink = ({morada, latitude, longitude }) => {
   };
 
   return (
-    <button style={{border: "none", background: "none", textDecoration: 'underline' }} onClick={handleStreetViewClick}>
+    <button className='text-start' style={{border: "none", background: "none", textDecoration: 'underline' }} onClick={handleStreetViewClick}>
       {morada}
     </button>
   );

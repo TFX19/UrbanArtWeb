@@ -67,7 +67,7 @@ const filteredMurals = murais.filter((mural) =>
             <div className="section-cards-tdsmurais mb-5 min-vh-100 position-relative w-100 container d-flex">
                 <div className="container col row row-cols-1 row-cols-md-4 ">
                     {filteredMurals.map((mural, index) => (
-                        <div className="col mt-3">
+                        <div className="col mt-1">
                             <CardMurais key={index} titulo={mural.titulo} idmural={mural.idmural} idmurais={`/sobre/mural/${mural.idmural}`} datainauguracao={mural.datainauguracao} descricao={mural.descricao} fotografia1={mural.fotografia1} />
                         </div>
                     ))}

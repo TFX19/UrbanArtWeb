@@ -123,7 +123,7 @@ function sobre() {
       <div className="section-cards-murais position-relative w-100 container d-flex">
         <div className="container col row row-cols-1 row-cols-md-4 align-items-center">
           {murais.map((mural, index) => (
-            <div className="col mt-3">
+            <div className="col mt-1">
               <CardMurais key={index} idmural={mural.idmural} idmurais={`/sobre/mural/${mural.idmural}`} titulo={mural.titulo} datainauguracao={mural.datainauguracao} descricao={mural.descricao} fotografia1={mural.fotografia1}/>
             </div>
           )).slice(0, 4)}

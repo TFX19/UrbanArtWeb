@@ -107,7 +107,7 @@ function App() {
             <h1>{heroiT}</h1>
             <h2>{heroiSubT}</h2>
             <p>{heroiDesc}</p>
-            <Link to='/sobre' className="btn btn-primary" onClick={"location.href='#objectivo'"}>ver mais</Link>
+            <Link to='/sobre' className="btn btn-primary">ver mais</Link>
           </div>
           <div className="carouselll container w-50 pt-5">
             <Carousel imagem1={imagem1} titulo1={titulo1} imagem2={imagem2} titulo2={titulo2} imagem3={imagem3} titulo3={titulo3} />
@@ -136,7 +136,7 @@ function App() {
                   <strong>{podescT}</strong>
                 </h3>
                 <p>{podescD}</p>
-                <Link to='/explorar' type='button' onClick={"location.href='#explorar'"} className="btn btn-primary w-100">Explorar</Link>
+                <Link to='/explorar' type='button' className="btn btn-primary w-100">Explorar</Link>
               </div>
             </div>
             <div className="container col row row-cols-1 row-cols-md-2">
