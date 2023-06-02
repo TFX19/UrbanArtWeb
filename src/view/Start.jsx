@@ -2,8 +2,10 @@ import { useState, useEffect } from 'react';
 import  {Link} from "react-router-dom";
 import api from '../api.jsx';
 import "../css/App.css";
-
-
+import cardM from "../../public/ico-card-murais.svg";
+import cardA from "../../public/ico-card-artistas.svg";
+import cardE from "../../public/ico-card-eventos.svg";
+import cardMA from "../../public/ico-card-mapa.svg";
 import Navbar from "../components/Navbar";
 import Carousel from "../components/Carousel";
 import { Footer } from '../components/Footer';
@@ -139,16 +141,16 @@ function App() {
             </div>
             <div className="container col row row-cols-1 row-cols-md-2">
               <div className="col">
-                <Card titulo={muraisTC} descricao={muraisDC} icon={"../assets/ico-card-murais.svg"} link={"/sobre/murais"} />
+                <Card titulo={muraisTC} descricao={muraisDC} icon={cardM} link={"/sobre/murais"} />
               </div>
               <div className="col">
-                <Card titulo={artistasTC} descricao={artistasDC} icon={"../assets/ico-card-artistas.svg"} link={"/sobre/artitas"} />
+                <Card titulo={artistasTC} descricao={artistasDC} icon={cardA} link={"/sobre/artitas"} />
               </div>
               <div className="col">
-                <Card titulo={eventosTC} descricao={eventosDC} icon={"../assets/ico-card-eventos.svg"} link={"/sobre"} />
+                <Card titulo={eventosTC} descricao={eventosDC} icon={cardE} link={"/sobre"} />
               </div>
               <div className="col">
-                <Card titulo={mapaTC} descricao={mapaDC} icon={"../assets/ico-card-mapa.svg"} link={"/explorar"} />
+                <Card titulo={mapaTC} descricao={mapaDC} icon={cardMA} link={"/explorar"} />
               </div>
             </div>
           </div>

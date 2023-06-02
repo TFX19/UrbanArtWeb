@@ -6,7 +6,6 @@ import "../css/App.css";
 import { GoogleMap, useJsApiLoader, MarkerF, InfoWindowF } from '@react-google-maps/api';
 import Navbar from "../components/Navbar";
 import { Footer } from '../components/Footer';
-
 function explorar() {
 
   const [explorarT, setExplorarT] = useState('');
