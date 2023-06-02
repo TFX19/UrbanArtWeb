@@ -84,4 +84,7 @@ font-weight: 600;
     .carouselll{
         display: none;
     }
+    .objt{
+        height: fit-content;
+    }
   }
