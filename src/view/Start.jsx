@@ -146,10 +146,10 @@ function App() {
               <div className="col">
                 <Card titulo={artistasTC} descricao={artistasDC} icon={cardA} link={"/sobre/artitas"} />
               </div>
-              <div className="col">
+              <div style={{marginTop: '-20px'}} className="col">
                 <Card titulo={eventosTC} descricao={eventosDC} icon={cardE} link={"/sobre"} />
               </div>
-              <div className="col">
+              <div style={{marginTop: '-20px'}} className="col">
                 <Card titulo={mapaTC} descricao={mapaDC} icon={cardMA} link={"/explorar"} />
               </div>
             </div>
