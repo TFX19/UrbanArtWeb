@@ -1,11 +1,12 @@
 
 import React from "react";
 import { useState, useEffect } from 'react';
+import { toast } from 'react-toastify';
 import api from '../api.jsx';
 export function ModalC(props) {
 
     let [comentario, setComentario] = useState("");
-    let [idMural, setIdMural] = useState("");
+    let [idmural, setIdmural] = useState("");
 
     useEffect(() => {
         api
@@ -19,7 +20,7 @@ export function ModalC(props) {
                         idmural: mural.idmural,
                     });
                 });
-                setIdMural(newMurais);
+                setIdmural(newMurais);
             })
             .catch((error) => {
                 alert(error);
@@ -29,14 +30,14 @@ export function ModalC(props) {
     function criarComentario()  {
         let valid = true;
         console.log(1);
-        if (comentario == "" || idMural =="" ) {
+        if (comentario == "" || props.idmural =="" ) {
           valid = false;
           sendError("O campo não pode estar vazio");
         }
         if (valid) {
           let newComentario = {
            comentario: comentario,
-           idMural: idMural,
+           idmural: props.idmural,
           };
           api.post("comentarios/create", newComentario).then((data) => {
             if (data.status == "200") {

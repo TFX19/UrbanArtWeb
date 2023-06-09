@@ -115,7 +115,7 @@ function App() {
         </div>
       </div>
       <div id="objectivo" className="section-objetivo position-relative d-flex align-items-center">
-        <div className="container w-100 d-lg-flex justify-content-between align-items-center text-center">
+        <div className="objt container w-100 d-lg-flex justify-content-between align-items-center text-center">
           <div className="py-5">
             <h1>
               <strong>{objT}</strong>

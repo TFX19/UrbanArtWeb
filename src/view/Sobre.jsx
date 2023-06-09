@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link } from "react-router-dom";
 import api from '../api.jsx';
+import { toast } from 'react-toastify';
 import "../css/Sobre.css";
 
 import Navbar from "../components/Navbar";
@@ -125,11 +126,12 @@ function sobre() {
           {murais.map((mural, index) => (
             <div className="col mt-1">
               <CardMurais key={index} idmural={mural.idmural} idmurais={`/sobre/mural/${mural.idmural}`} titulo={mural.titulo} datainauguracao={mural.datainauguracao} descricao={mural.descricao} fotografia1={mural.fotografia1}/>
+              <ModalC idmural={mural.idmural}/>
             </div>
           )).slice(0, 4)}
         </div>
       </div>
-            <ModalC />
+            
       <div className="section-btn-murais p-5 align-content-between text-center w-100">
         <div className='container w-100 p-5 align-content-center'>
           <Link to='/sobre/murais' type='button' className="btn btn-primary align text-center">ver todos</Link>
@@ -162,7 +164,7 @@ function sobre() {
           <Link to='/sobre/artistas' type='button' className="btn btn-primary align text-center">ver todos</Link>
         </div>
       </div> 
-      {/* fim murais */}
+      {/* fim Artistas */}
       <Footer />
     </div>
   );

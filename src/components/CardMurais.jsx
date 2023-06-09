@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import coment from "../../public/ico-coment.svg";
 
 export function CardMurais(props) {
- 
   const {idmurais, idmural, titulo, datainauguracao, descricao, fotografia1} = props;
 
   return (
