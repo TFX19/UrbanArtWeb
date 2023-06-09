@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import coment from "../../public/ico-coment.svg";
+import ModalC from '../components/ModalC.jsx';
 
 export function CardMurais(props) {
   const {idmurais, idmural, titulo, datainauguracao, descricao, fotografia1} = props;
@@ -17,10 +18,11 @@ export function CardMurais(props) {
           <p style={{whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis', maxWidth:'300px'}} className="card-text pt-3">{descricao}</p>
           <div className="d-flex justify-content-between mt-5">
           <Link to={idmurais} type="button" href="#" className="btn btn-primary">ver mais</Link>
-          <a href="" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal"><img src={coment} alt="icon comentário" /></a>
+          <a href="" type="button" data-bs-toggle="modal" data-bs-target={`#${props.idmural}`}><img src={coment} alt="icon comentário" /></a>
           </div>
         </div>
       </div>
+      <ModalC idmural={idmural}/>
     </div>
   );
 }

@@ -4,32 +4,11 @@ import { useState, useEffect } from 'react';
 import { toast } from 'react-toastify';
 import api from '../api.jsx';
 export function ModalC(props) {
-
+    const{idmural} = props;
     let [comentario, setComentario] = useState("");
-    let [idmural, setIdmural] = useState("");
-
-    useEffect(() => {
-        api
-            .get("/murais/list")
-            .then(({ data }) => {
-                const dados = data.data;
-                var newMurais = [];
-                Object.keys(dados).map((key) => {
-                    const mural = dados[key];
-                    newMurais.push({
-                        idmural: mural.idmural,
-                    });
-                });
-                setIdmural(newMurais);
-            })
-            .catch((error) => {
-                alert(error);
-            });
-    }, []);
 
     function criarComentario()  {
         let valid = true;
-        console.log(1);
         if (comentario == "" || props.idmural =="" ) {
           valid = false;
           sendError("O campo não pode estar vazio");
@@ -58,11 +37,11 @@ export function ModalC(props) {
       };
 
     return (
-        <div className="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div className="modal fade" id={idmural} tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div className="modal-dialog">
                 <div className="modal-content">
                     <div className="modal-header">
-                        <h5 className="modal-title" id="exampleModalLabel">Enviar um comentário</h5>
+                        <h5 className="modal-title" id={idmural}>Enviar um comentário</h5>
                         <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div className="modal-body">

@@ -8,7 +8,7 @@ import Navbar from "../components/Navbar";
 import { Footer } from '../components/Footer';
 import CardMurais from '../components/CardMurais.jsx';
 import CardArtistas from '../components/CardArtistas.jsx';
-import ModalC from '../components/ModalC.jsx';
+
 
 function sobre() {
 
@@ -126,7 +126,6 @@ function sobre() {
           {murais.map((mural, index) => (
             <div className="col mt-1">
               <CardMurais key={index} idmural={mural.idmural} idmurais={`/sobre/mural/${mural.idmural}`} titulo={mural.titulo} datainauguracao={mural.datainauguracao} descricao={mural.descricao} fotografia1={mural.fotografia1}/>
-              <ModalC idmural={mural.idmural}/>
             </div>
           )).slice(0, 4)}
         </div>
