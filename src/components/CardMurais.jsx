@@ -9,7 +9,7 @@ export function CardMurais(props) {
   return (
     <div id={{idmural}} className="d-flex w-100">
       <div className="card" style={{ width: '18rem', height: '25rem'}}>
-        <img style={{width: '285px', height:'180px'}} src={fotografia1} className="card-img-top" alt="fotografia1" />
+        <img style={{width: '285px', height:'180px'}} src={fotografia1} className="card-img-top img-fluid" alt="fotografia1" />
         <div className="card-body">
           <div className="d-flex justify-content-between">
             <h4 style={{whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis', maxWidth:'300px'}} className="card-title">{titulo}</h4>

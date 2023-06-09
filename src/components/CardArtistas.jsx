@@ -6,7 +6,7 @@ export function CardArtistas(props) {
   return (
     <div id={{idartista}} className="d-flex w-100">
       <div className="card" style={{ width: '18rem', height: '25rem'}}>
-        <img style={{width: '285px', height:'180px', objectFit:'cover'}} src={fotografia} className="card-img-top" alt="fotografiadoartista" />
+        <img style={{width: '285px', height:'180px', objectFit:'cover'}} src={fotografia} className="card-img-top img-fluid" alt="fotografiadoartista" />
         <div className="card-body">
           <div className="d-flex justify-content-between">
             <h4 className="card-title">{nomeA}</h4>
