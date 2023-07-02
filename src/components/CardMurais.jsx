@@ -7,7 +7,7 @@ export function CardMurais(props) {
   const {idmurais, idmural, titulo, datainauguracao, descricao, fotografia1} = props;
 
   return (
-    <div id={{idmural}} className="d-flex w-100">
+    <div id={{idmural}} className="cardd d-flex w-100">
       <div className="card" style={{ width: '18rem', height: '25rem'}}>
         <img style={{width: '285px', height:'180px'}} src={fotografia1} className="card-img-top img-fluid" alt="fotografia1" />
         <div className="card-body">

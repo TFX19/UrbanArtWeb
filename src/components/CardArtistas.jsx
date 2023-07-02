@@ -4,7 +4,7 @@ export function CardArtistas(props) {
 
   const {idartista, idartistas, nomeA, pais, descricao, fotografia} = props;
   return (
-    <div id={{idartista}} className="d-flex w-100">
+    <div id={{idartista}} className="cardd d-flex w-100">
       <div className="card" style={{ width: '18rem', height: '25rem'}}>
         <img style={{width: '285px', height:'180px', objectFit:'cover'}} src={fotografia} className="card-img-top img-fluid" alt="fotografiadoartista" />
         <div className="card-body">
