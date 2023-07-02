@@ -27,7 +27,7 @@ padding-top: 8%;
 }
 .section-cards-murais{
    background-color: #ffffff;
-   height: 65vh;
+   height: 50vh;
 }
 
 .section-murais-detalhes h2{
@@ -42,7 +42,7 @@ padding-top: 8%;
 }
 
 .section-btn-murais{
-    height: 25vh;
+    height: 10vh;
     background-color: #F3F3F3;
 }
 @media only screen and (max-width: 765px) {
@@ -54,5 +54,11 @@ padding-top: 8%;
     }
     .section-sobre{
         height: fit-content;
+    }
+    .mob{
+        align-items: center;
+        align-self: center;
+        padding: 1rem;
+        margin-left: 5%;
     }
   }

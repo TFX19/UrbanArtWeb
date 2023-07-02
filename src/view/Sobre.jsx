@@ -114,7 +114,7 @@ function sobre() {
       {/* inicio murais */}
       <div className='section-murais position-relative p-5 d-flex w-100 '>
         <div className='container'>
-          <div className='container pt-2 w-100'>
+          <div className='container w-100'>
             <h1>{muraisT}</h1>
             <p className='pt-4'>{muraisD}</p>
           </div>
@@ -124,15 +124,15 @@ function sobre() {
       <div className="section-cards-murais position-relative w-100 container d-flex">
         <div className="container col row row-cols-1 row-cols-md-4 align-items-center">
           {murais.map((mural, index) => (
-            <div className="col mt-1">
+            <div className="mob col">
               <CardMurais key={index} idmural={mural.idmural} idmurais={`/sobre/mural/${mural.idmural}`} titulo={mural.titulo} datainauguracao={mural.datainauguracao} descricao={mural.descricao} fotografia1={mural.fotografia1}/>
             </div>
           )).slice(0, 4)}
         </div>
       </div>
             
-      <div className="section-btn-murais p-5 align-content-between text-center w-100">
-        <div className='container w-100 p-5 align-content-center'>
+      <div className="section-btn-murais p-2 align-content-between text-center w-100">
+        <div className='container w-100 p-4 align-content-center'>
           <Link to='/sobre/murais' type='button' className="btn btn-primary align text-center">ver todos</Link>
         </div>
       </div>
@@ -141,7 +141,7 @@ function sobre() {
       {/* inicio artistas */}
       <div className='section-murais position-relative p-5 d-flex w-100 '>
         <div className='container'>
-          <div className='container pt-5 w-100'>
+          <div className='container w-100'>
             <h1>{artistasT}</h1>
             <p className='pt-4'>{artistasD}</p>
           </div>
@@ -151,15 +151,15 @@ function sobre() {
       <div className="section-cards-murais position-relative w-100 container d-flex">
         <div className="container col row row-cols-1 row-cols-md-4 align-items-center">
         {artistas.map((artistas, index) => (
-            <div className="col mt-3">
+            <div className="col">
               <CardArtistas key={index} idartistas={`/sobre/artista/${artistas.idartista}`} idartista={artistas.idartista} nomeA={artistas.nomeartistico} pais={artistas.pais} descricao={artistas.descricao} fotografia={artistas.fotografia} />
             </div>
           )).slice(0, 4)}
         </div>
       </div>
 
-      <div className="section-btn-murais p-5 align-content-between text-center w-100">
-        <div className='container w-100 p-5 align-content-center'>
+      <div className="section-btn-murais p2 align-content-between text-center w-100">
+        <div className='container w-100 p-4 align-content-center'>
           <Link to='/sobre/artistas' type='button' className="btn btn-primary align text-center">ver todos</Link>
         </div>
       </div> 
