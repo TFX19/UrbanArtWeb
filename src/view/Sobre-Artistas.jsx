@@ -61,8 +61,8 @@ function sobre() {
 
             <Search searchTerm={searchTerm} handleSearch={handleSearch} />
 
-            <div className="section-cards-tdsartistas min-vh-100 position-relative w-100 container d-flex">
-                <div className="container col row row-cols-1 row-cols-md-4 align-items-center">
+            <div className="section-cards-tdsmurais min-vh-100 position-relative w-100 container d-flex">
+                <div className="container col row row-cols-1 row-cols-md-4">
                     {filteredArtistas.map((artistas, index) => (
                         <div className="col mt-3">
                          <CardArtistas  key={index} idartistas={`/sobre/artista/${artistas.idartista}`} idartista={artistas.idartista} nomeA={artistas.nomeartistico} pais={artistas.pais} descricao={artistas.descricao} fotografia={artistas.fotografia}  />
