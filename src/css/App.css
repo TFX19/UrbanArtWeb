@@ -28,7 +28,7 @@
 }
 
 .section-imgexplorar{
-    height: 65vh;
+    height: 50vh;
     background-image: url('../assets/background-sobre.jpg');
     background-repeat:repeat-x;
     
@@ -73,7 +73,21 @@ font-weight: 600;
 .map-marker{
     margin-top: -50px;
 }
-
+.alert {
+  padding: 1rem;
+  margin: 1rem auto;
+  max-width: 600px;
+  border-radius: 0.5rem;
+  text-align: center;
+}
+.alert-info {
+  background-color: #d0e8ff;
+  color: #004085;
+}
+.alert-danger {
+  background-color: #f8d7da;
+  color: #721c24;
+}
 @media only screen and (max-width: 765px) {
     .txtA {
       display: none;

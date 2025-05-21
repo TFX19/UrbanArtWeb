@@ -45,64 +45,85 @@ function App() {
   const [imagem3, setImagem3] = useState('');
   const [titulo3, setTitulo3] = useState('');
 
-    useEffect(() => {
-        api
-            .get("/murais/list")
-            .then(({ data }) => {
-                const dados = data.data;
-                var newMurais = [];
-                Object.keys(dados).map((key) => {
-                    const mural = dados[key];
-                    newMurais.push({
-                        titulo: mural.titulo,
-                        fotografia1: mural.fotografia1
-                    });
-                });
-                setTitulo1(dados[0].titulo);
-                setImagem1(dados[0].fotografia1);
-                setTitulo2(dados[1].titulo);
-                setImagem2(dados[1].fotografia1);
-                setTitulo3(dados[2].titulo);
-                setImagem3(dados[2].fotografia1);
-            })
-            .catch((error) => {
-                alert(error);
-            });
-    }, []);
+  const [erroAPI, setErroAPI] = useState(false);
+  const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    api
-      .get('/infowebsite/list')
-      .then(({ data }) => {
-        const dados = data.data
-        setHeroiT(dados[0].titulo);
-        setHeroiSubT(dados[0].descricao);
-        setHeroiDesc(dados[0].descricao2);
-        setObjT(dados[1].titulo);
-        setObjD(dados[1].descricao2);
-        setPodescT(dados[2].titulo);
-        setPodescD(dados[2].descricao2);
-        setMuraisTC(dados[3].titulo);
-        setmuraisDC(dados[3].descricao2);
-        setArtistasTC(dados[4].titulo);
-        setArtistasDC(dados[4].descricao2);
-        setEventosTC(dados[5].titulo);
-        setEventosDC(dados[5].descricao2);
-        setMapaTC(dados[6].titulo);
-        setMapaDC(dados[6].descricao2);
-      })
-      .catch((error) => {
-        alert(error)
-      })
-  }, [])
+useEffect(() => {
+  setLoading(true);
+  api
+    .get("/murais/list")
+    .then(({ data }) => {
+      const dados = data.data;
+      setTitulo1(dados[0].titulo);
+      setImagem1(dados[0].fotografia1);
+      setTitulo2(dados[1].titulo);
+      setImagem2(dados[1].fotografia1);
+      setTitulo3(dados[2].titulo);
+      setImagem3(dados[2].fotografia1);
+      setErroAPI(false);
+    })
+    .catch(() => {
+      setErroAPI(true);
+    })
+    .finally(() => {
+      setLoading(false);
+    });
+}, []);
 
+useEffect(() => {
+  setLoading(true); // começa a carregar
+
+  api
+    .get('/infowebsite/list')
+    .then(({ data }) => {
+      const dados = data.data;
+
+      setHeroiT(dados[0].titulo);
+      setHeroiSubT(dados[0].descricao);
+      setHeroiDesc(dados[0].descricao2);
+      setObjT(dados[1].titulo);
+      setObjD(dados[1].descricao2);
+      setPodescT(dados[2].titulo);
+      setPodescD(dados[2].descricao2);
+      setMuraisTC(dados[3].titulo);
+      setmuraisDC(dados[3].descricao2);
+      setArtistasTC(dados[4].titulo);
+      setArtistasDC(dados[4].descricao2);
+      setEventosTC(dados[5].titulo);
+      setEventosDC(dados[5].descricao2);
+      setMapaTC(dados[6].titulo);
+      setMapaDC(dados[6].descricao2);
+
+      setErroAPI(false); // sem erros
+    })
+    .catch((error) => {
+      console.error("Erro ao carregar infowebsite:", error);
+      setErroAPI(true); // ativa mensagem de erro
+    })
+    .finally(() => {
+      setLoading(false); // termina carregamento
+    });
+}, []);
 
   return (
     <div className='App'>
         <Navbar />
       {/*<div className="ghost"></div>  div que empurra o conteudo para baixo */}
+      
       <div id="inicio" className="section-heroi position-relative w-100 vh-100 d-flex">
         <div className="container pt-5 d-flex justify-content-between align-items-center">
+            {loading && (
+                <div className="alert alert-info text-center" role="alert">
+                  A carregar dados... Por favor, aguarde.
+                </div>
+              )}
+
+              {erroAPI && (
+                <div className="alert alert-danger text-center" role="alert">
+                  Não foi possível carregar os dados. Verifique a sua ligação ou tente novamente mais tarde.
+                </div>
+              )}
+              
           <div className="txt-inicio container w-50 pt-5">
             <h1>{heroiT}</h1>
             <h2>{heroiSubT}</h2>
@@ -130,7 +151,6 @@ function App() {
         <div className="container p-5 my-4">
           <div className="row">
             <div className="col-xl-6 col-sm-12 row">
-              <div></div>
               <div className='txtA p-5 align-content-center'>
                 <h3>
                   <strong>{podescT}</strong>

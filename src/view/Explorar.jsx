@@ -87,19 +87,19 @@ function explorar() {
       <div className="ghost"></div>
 
       <div id="sobre" className="section-imgexplorar position-relative w-100 d-flex">
-        <div className="container w-100 d-flex p-5">
+        <div className="container w-100 d-flex">
           <div className='txt-tsobre container d-inline-block w-100 h-25 pt-5 align-content-center text-center'>
             <h2>{explorarT}</h2>
           </div>
         </div>
-
       </div>
 
       <div className='section-sobre w-100 d-flex align-content-between'>
-        <div className='txtsobreD container w-75 text-center align-content-center d-inline-block'>
+        <div className='txtsobreD container p-5 w-75 text-center align-content-center d-inline-block'>
           <p>{explorarD}</p>
         </div>
       </div>
+
       <div className='section-sobre-maps w-100 min-vh-100'>
           {isLoaded ? (
             <GoogleMap

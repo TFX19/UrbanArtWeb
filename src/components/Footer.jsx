@@ -1,4 +1,4 @@
-import React from "react";
+import { Link } from 'react-router-dom';
 import logow from "../../public/Logowhite.svg"
 export function Footer() {
   return (
@@ -18,13 +18,13 @@ export function Footer() {
               <h5 className="text-white">Sobre</h5>
               <ul className="nav flex-column">
                 <li className="nav-item mb-2">
-                  <a href="#" className="nav-link p-0 text-white">Inicio</a>
+                  <Link to="/" className="nav-link p-0 text-white">Inicio</Link>
                 </li>
                 <li className="nav-item mb-2">
-                  <a href="#" className="nav-link p-0 text-white">Sobre</a>
+                  <Link to="/sobre" className="nav-link p-0 text-white">Sobre</Link>
                 </li>
                 <li className="nav-item mb-2">
-                  <a href="#" className="nav-link p-0 text-white">Explorar</a>
+                  <Link to="/explorar" className="nav-link p-0 text-white">Explorar</Link>
                 </li>
               </ul>
             </div>
@@ -32,7 +32,7 @@ export function Footer() {
               <h5 className="text-white">Contactos</h5>
               <ul className="nav flex-column">
                 <li className="nav-item mb-2">
-                  <a href="#" className="nav-link p-0 text-white">Telefone<br/><strong>920956755</strong></a>
+                  <a href="#" className="nav-link p-0 text-white">Telefone<br/><strong>912 345 678</strong></a>
                 </li>
                 <li className="nav-item mb-2">
                   <a href="#" className="nav-link p-0 text-white">E-mail<br/><strong>email@email.com</strong></a>
@@ -44,7 +44,7 @@ export function Footer() {
             <p className="text-white">
               {" "}
               <strong>© Copyright 2022/2023 - Arte Urbana - Web</strong>
-              <small className="ms-3"> todas as imagens e ícones exibidos têm uma autoria, sendo que as imagens relacionas com os murais foram retiradas do canal de youtube “Doc Doc TV” do vídeo em especifico “Covilhã: Arte Urbana... e não só!”, da página Roteiro de Arte urbana na Covilhã, Portugal | Viaje Comigo, WOOL | Covilhã Urban Art (Portugal) – Google Os Meus Mapas. Todos os ícones apresentados foram retirados do website “www.flaticon.com”.</small>
+              <small className="ms-3"> Este website foi desenvolvido como parte de um projeto escolar no âmbito do projeto final de curso. Todas as imagens e ícones exibidos têm uma autoria, sendo que as imagens relacionas com os murais foram retiradas do canal de youtube “Doc Doc TV” do vídeo em especifico “Covilhã: Arte Urbana... e não só!”, da página Roteiro de Arte urbana na Covilhã, Portugal | Viaje Comigo, WOOL | Covilhã Urban Art (Portugal) – Google Os Meus Mapas. Todos os ícones apresentados foram retirados do website “www.flaticon.com”.</small>
             </p>
             {/* <ul className="list-unstyled d-flex">
               <a href="" type="button" className="text-white" target="_blank">
